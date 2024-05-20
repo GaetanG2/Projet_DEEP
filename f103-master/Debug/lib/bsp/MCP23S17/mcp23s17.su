@@ -1,0 +1,17 @@
+mcp23s17.c:44:13:MCP23S17_InitialComm	16	static
+mcp23s17.c:93:13:MCP23S17_CSPinSet	16	static
+mcp23s17.c:106:13:MCP23S17_SPIWrite	16	static
+mcp23s17.c:117:13:MCP23S17_read_1	24	static
+mcp23s17.c:132:13:MCP23S17_read_2	16	static
+mcp23s17.c:137:13:MCP23S17_write_2	16	static
+mcp23s17.c:148:14:MCP23S17_write_3	16	static
+mcp23s17.c:153:6:MCP23S17_init	8	static
+mcp23s17.c:168:6:MCP23S17_direction	16	static
+mcp23s17.c:180:6:MCP23S17_configurePullUps	16	static
+mcp23s17.c:191:6:MCP23S17_interruptEnable	16	static
+mcp23s17.c:207:6:MCP23S17_mirrorInterrupts	24	static
+mcp23s17.c:228:7:MCP23S17_interruptPolarity	24	static
+mcp23s17.c:242:6:MCP23S17_defaultValue	16	static
+mcp23s17.c:247:6:MCP23S17_interruptControl	16	static
+mcp23s17.c:252:6:MCP23S17_write	16	static
+mcp23s17.c:257:6:MCP23S17_read	16	static

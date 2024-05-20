@@ -1,0 +1,105 @@
+\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
+
+
+Default main function.  
+
+
+{\ttfamily \#include "{}stm32f1xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1\+\_\+uart.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1\+\_\+sys.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1\+\_\+gpio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1\+\_\+xpt2046.\+h"{}}\newline
+{\ttfamily \#include "{}macro\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systick.\+h"{}}\newline
+{\ttfamily \#include "{}tft\+\_\+ili9341/stm32f1\+\_\+ili9341.\+h"{}}\newline
+{\ttfamily \#include "{}GPS/\+GPS.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1\+\_\+adc.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f1\+\_\+timer.\+h"{}}\newline
+{\ttfamily \#include "{}servo.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a9e960083d577ed913a61a2300c2a959f}\label{main_8c_a9e960083d577ed913a61a2300c2a959f} 
+\#define {\bfseries ADC\+\_\+\+SENSOR\+\_\+\+CHANNEL}~ADC\+\_\+1
+\item 
+\Hypertarget{main_8c_adabf62496018b5aa9a6adb17610941b2}\label{main_8c_adabf62496018b5aa9a6adb17610941b2} 
+\#define {\bfseries COORD\+\_\+3\+\_\+X}~45
+\item 
+\Hypertarget{main_8c_a65cc9f2636a3fa9735722e56ef7502b5}\label{main_8c_a65cc9f2636a3fa9735722e56ef7502b5} 
+\#define {\bfseries COORD\+\_\+Y}~145
+\item 
+\Hypertarget{main_8c_a001791a21d538b8b9176287ae60d9b61}\label{main_8c_a001791a21d538b8b9176287ae60d9b61} 
+\#define {\bfseries MAX\+\_\+\+DIGITS}~4
+\item 
+\Hypertarget{main_8c_a85a031c4e3906a88193930cf583e75fc}\label{main_8c_a85a031c4e3906a88193930cf583e75fc} 
+\#define {\bfseries TRAIT\+\_\+1\+\_\+X}~70
+\item 
+\Hypertarget{main_8c_a56e07deb8c3fb66df0954e4481ecaa1c}\label{main_8c_a56e07deb8c3fb66df0954e4481ecaa1c} 
+\#define {\bfseries TRAIT\+\_\+2\+\_\+X}~95
+\item 
+\Hypertarget{main_8c_aa2bbeb8b088ccb1863a27f0d9e7493e7}\label{main_8c_aa2bbeb8b088ccb1863a27f0d9e7493e7} 
+\#define {\bfseries TRAIT\+\_\+3\+\_\+X}~120
+\item 
+\Hypertarget{main_8c_ae3f412479142c494c8aa722ecd88ae12}\label{main_8c_ae3f412479142c494c8aa722ecd88ae12} 
+\#define {\bfseries TRAIT\+\_\+4\+\_\+X}~145
+\item 
+\Hypertarget{main_8c_a08a0ee9cbc67f32d977b57cfa32dab5a}\label{main_8c_a08a0ee9cbc67f32d977b57cfa32dab5a} 
+\#define {\bfseries BUZZER\+\_\+\+GPIO}~GPIOB
+\item 
+\Hypertarget{main_8c_ab61d0981ed42df9e18211b273d22cfcd}\label{main_8c_ab61d0981ed42df9e18211b273d22cfcd} 
+\#define {\bfseries BUZZER\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\Hypertarget{main_8c_a1ad467ff1eb6047108fc3c33a070dc0b}\label{main_8c_a1ad467ff1eb6047108fc3c33a070dc0b} 
+\#define {\bfseries PERIOD\+\_\+\+TIMER}~10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a1063a933365c11ee8a0aafe8dd2a0b2b}\label{main_8c_a1063a933365c11ee8a0aafe8dd2a0b2b} 
+void {\bfseries write\+LED} (bool\+\_\+e b)
+\item 
+\Hypertarget{main_8c_a87c44334f1b42f6ca81894ef09acd7f6}\label{main_8c_a87c44334f1b42f6ca81894ef09acd7f6} 
+bool\+\_\+e {\bfseries read\+Button} (void)
+\item 
+\Hypertarget{main_8c_aa4bba522cda4313b5c2e1e894f36e08e}\label{main_8c_aa4bba522cda4313b5c2e1e894f36e08e} 
+void {\bfseries process\+\_\+ms} (void)
+\item 
+\Hypertarget{main_8c_afcc10a2e605b20a54598a9329b23bef6}\label{main_8c_afcc10a2e605b20a54598a9329b23bef6} 
+int {\bfseries detect\+Digit} (int16\+\_\+t x, int16\+\_\+t y)
+\item 
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int {\bfseries main} (void)
+\item 
+\Hypertarget{main_8c_a7aeb69d8a78bd9c8404c4cdf7121b327}\label{main_8c_a7aeb69d8a78bd9c8404c4cdf7121b327} 
+void {\bfseries Init\+\_\+screen} (void)
+\item 
+\Hypertarget{main_8c_aeb0d7278e68d19cbd598f14693b928d5}\label{main_8c_aeb0d7278e68d19cbd598f14693b928d5} 
+int {\bfseries detected\+Any\+Digit} (int16\+\_\+t x, int16\+\_\+t y)
+\item 
+\Hypertarget{main_8c_af9821d9a78e310b2b2cab45e9de3e3b4}\label{main_8c_af9821d9a78e310b2b2cab45e9de3e3b4} 
+void {\bfseries Screen} (void)
+\item 
+\Hypertarget{main_8c_add36ebc32cf40d5df2569af191348be1}\label{main_8c_add36ebc32cf40d5df2569af191348be1} 
+void {\bfseries TFT\+\_\+demo} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_ad29a5b8bda76948b3b2ef72a4a665875}\label{main_8c_ad29a5b8bda76948b3b2ef72a4a665875} 
+float {\bfseries millivolt} =0.\+0
+\item 
+\Hypertarget{main_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}\label{main_8c_ac4f474c82e82cbb89ca7c36dd52be0ed} 
+int {\bfseries value} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default main function. 
+
+\begin{DoxyAuthor}{Author}
+GAETAN 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/July-\/2019  
+\end{DoxyDate}
